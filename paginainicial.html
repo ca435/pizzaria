@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seleção de Mesas</title>
+  <link rel="stylesheet" href="menu.css">
+  <style>
+ 
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <a href="#">Opção 1</a>
+    <a href="#">Opção 2</a>
+    <a href="#">Opção 3</a>
+    <!-- Adicione mais opções de menu, se desejar -->
+  </div>
+
+  <div class="conteudo">
+    <h1>Seleção de Mesas</h1>
+    <button class="botaoMesa" onclick="redirecionarParaPagina1()">Mesa 1</button>
+    <button class="botaoMesa" onclick="redirecionarParaPagina2()">Mesa 2</button>
+    <button class="botaoMesa">Mesa 3</button>
+    <br>
+    <button class="botaoMesa">Mesa 4</button>
+    <button class="botaoMesa">Mesa 5</button>
+    <button class="botaoMesa">Mesa 6</button>
+  </div>
+  <script>
+    function redirecionarParaPagina1() {
+      window.location.href = "http://127.0.0.1:5500/mesa1.html"; // Substitua "pagina.html" pelo URL desejado
+    }
+    function redirecionarParaPagina2() {
+      window.location.href = "http://127.0.0.1:5500/mesa2.html"; // Substitua "pagina.html" pelo URL desejado
+    }
+    
+  </script>
+</body>
+</html>

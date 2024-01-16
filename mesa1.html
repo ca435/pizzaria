@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seleção de Sabores mesa 1</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style></style>
+  </head>
+  <body>
+    <div id="content">
+      <h2>Tamanhos de pizza</h2>
+      <input
+        type="text"
+        id="searchInput"
+        onkeyup="searchSabor()"
+        placeholder="Pesquisar sabores..."
+      />
+      <button onclick="adicionarSabor('master', 70)" class="bt-t" type="submit">
+        Pizza master</button
+      ><br />
+
+      <div id="saboresEscolhidos">
+        <h2>Escolha seus sabores 1:</h2>
+        <ul id="saboresEscolhidos"></ul>
+      </div>
+
+      <h2>Escolha seus sabores:</h2>
+      <ul id="sabores">
+        <li>
+          <button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">
+            Marguerita
+          </button>
+        </li>
+        <br />
+        <li>
+          <button onclick="adicionarSabor('chocolate', 18)">Chocolate</button>
+        </li>
+        <li>
+          <button onclick="adicionarSabor('morango', 16)">Morango</button>
+        </li>
+        <!-- Adicione mais sabores, se desejar -->
+      </ul>
+
+      <h2>Sabores Escolhidos da mesa 1:</h2>
+      <ul id="saboresEscolhidos">
+        <!-- Aqui serão exibidos os sabores escolhidos -->
+      </ul>
+
+      <p>Total a ser cobrado: <span id="total">R$0</span></p>
+
+      <button onclick="limparSabores()" class="botao-limpar">
+        Limpar Sabores
+      </button>
+      <button onclick="imprimirSabores('saboresMesa1')" class="botao-imprimir">
+        Imprimir Sabores Mesa 1
+      </button>
+    </div>
+
+    <script>
+      function adicionarSabor(sabor, valor) {
+        let saboresEscolhidos = sessionStorage.getItem("saboresMesa1")
+          ? JSON.parse(sessionStorage.getItem("saboresMesa1"))
+          : [];
+        saboresEscolhidos.push({ sabor: sabor, valor: valor });
+        sessionStorage.setItem(
+          "saboresMesa1",
+          JSON.stringify(saboresEscolhidos)
+        );
+        exibirSaboresEscolhidos();
+        calcularTotal();
+      }
+
+      function exibirSaboresEscolhidos() {
+        const listaSabores = document.getElementById("saboresEscolhidos");
+        listaSabores.innerHTML = "";
+
+        let saboresEscolhidos = sessionStorage.getItem("saboresMesa1")
+          ? JSON.parse(sessionStorage.getItem("saboresMesa1"))
+          : [];
+
+        saboresEscolhidos.forEach((item) => {
+          const itemLista = document.createElement("li");
+          itemLista.textContent = `${item.sabor} - Valor: R$ ${item.valor}`;
+          listaSabores.appendChild(itemLista);
+        });
+      }
+
+      function calcularTotal() {
+        let saboresEscolhidos = sessionStorage.getItem("saboresMesa1")
+          ? JSON.parse(sessionStorage.getItem("saboresMesa1"))
+          : [];
+        let total = 0;
+
+        saboresEscolhidos.forEach((item) => {
+          total += item.valor;
+        });
+
+        const totalElement = document.getElementById("total");
+        totalElement.textContent = `R$ ${total}`;
+      }
+
+      function limparSabores() {
+        sessionStorage.removeItem("saboresMesa1");
+        exibirSaboresEscolhidos();
+        calcularTotal();
+      }
+
+      // Exibir sabores ao carregar a página
+      window.onload = function () {
+        exibirSaboresEscolhidos();
+        calcularTotal();
+      };
+
+      function imprimirSabores(chaveMesa) {
+        let saboresEscolhidos = sessionStorage.getItem(chaveMesa);
+        if (saboresEscolhidos) {
+          saboresEscolhidos = JSON.parse(saboresEscolhidos);
+          let conteudo = "";
+          saboresEscolhidos.forEach((item) => {
+            conteudo += `${item.sabor} - Valor: R$ ${item.valor}\n`;
+          });
+          const janelaImpressao = window.open("", "_blank");
+          janelaImpressao.document.write(`<pre>${conteudo}</pre>`);
+          janelaImpressao.document.close();
+          janelaImpressao.print();
+        } else {
+          alert("Nenhum sabor selecionado para imprimir!");
+        }
+      }
+
+      function searchSabor() {
+        const input = document
+          .getElementById("searchInput")
+          .value.toUpperCase();
+        const ul = document.getElementById("sabores");
+        const li = ul.getElementsByTagName("li");
+
+        for (let i = 0; i < li.length; i++) {
+          const button = li[i].getElementsByTagName("button")[0];
+          const sabor = button.textContent.toUpperCase();
+          if (sabor.indexOf(input) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

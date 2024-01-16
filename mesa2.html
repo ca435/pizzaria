@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Seleção de Sabores mesa 2</title>
+  <link rel="stylesheet" href="styles.css">
+ 
+</head>
+
+<body>
+
+    <body style="height: 3500px;"> <!-- Defina a altura da página -->
+    <div id="content">
+    <input type="text" id="searchInput" onkeyup="searchSabor()" placeholder="Pesquisar sabores...">
+    
+    
+  <h2>Tamanhos de pizza</h2>
+  <div class="bt-tamanhos">
+  <button onclick="adicionarSabor('master', 70)" class="bt-t" type="submit">Pizza master</button><br>
+  <button onclick="adicionarSabor('grande', 60)" class="bt-t" type="submit">Pizza Grande</button><br>
+  <button onclick="adicionarSabor('media', 50)" class="bt-t"  type="submit">Pizza media</button><br>
+  <button onclick="adicionarSabor('pequena', 40)" class="bt-t"type="submit">Pizza pequena</button><br>
+  <button onclick="adicionarSabor('broto', 30)" class="bt-t"  type="submit">Pizza broto</button><br>
+</div>
+
+  <div id="saboresEscolhidos1">
+    <h3>Total a ser cobrado: <span id="total">R$0</span></h3>
+   
+  <button onclick="limparSabores()" class="botao-limpar">Limpar Sabores</button>
+  <button onclick="imprimirSabores('saboresMesa2')" class="botao-imprimir">Imprimir Sabores Mesa 2</button>
+
+ 
+
+
+  <h2>Escolha seus sabores:</h2>
+  <ul id="sabores">
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('presunto', 18)">Presunto</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+    <li><button class="botaosabor" onclick="adicionarSabor('marguerita', 20)">Marguerita</button></li><br>
+
+
+    
+    
+    
+
+    <!-- Adicione mais sabores, se desejar -->
+  </ul>
+  <ul id="saboresEscolhidos">
+    <!-- Aqui serão exibidos os sabores escolhidos -->
+  </ul>
+ 
+  
+  <script>
+    function adicionarSabor(sabor, valor) {
+      let saboresEscolhidos = sessionStorage.getItem('saboresMesa2') ? JSON.parse(sessionStorage.getItem('saboresMesa2')) : [];
+      saboresEscolhidos.push({ sabor: sabor, valor: valor });
+      sessionStorage.setItem('saboresMesa2', JSON.stringify(saboresEscolhidos));
+      exibirSaboresEscolhidos();
+      calcularTotal();
+    }
+
+    function exibirSaboresEscolhidos() {
+      const listaSabores = document.getElementById('saboresEscolhidos');
+      listaSabores.innerHTML = '';
+
+      let saboresEscolhidos = sessionStorage.getItem('saboresMesa2') ? JSON.parse(sessionStorage.getItem('saboresMesa2')) : [];
+
+      saboresEscolhidos.forEach(item => {
+        const itemLista = document.createElement('li');
+        itemLista.textContent = `${item.sabor} - Valor: R$ ${item.valor}`;
+        listaSabores.appendChild(itemLista);
+      });
+    }
+
+    function calcularTotal() {
+      let saboresEscolhidos = sessionStorage.getItem('saboresMesa2') ? JSON.parse(sessionStorage.getItem('saboresMesa2')) : [];
+      let total = 0;
+
+      saboresEscolhidos.forEach(item => {
+        total += item.valor;
+      });
+
+      const totalElement = document.getElementById('total');
+      totalElement.textContent = `R$ ${total}`;
+    }
+
+    function limparSabores() {
+      sessionStorage.removeItem('saboresMesa2');
+      exibirSaboresEscolhidos();
+      calcularTotal();
+    }
+
+    // Exibir sabores ao carregar a página
+    window.onload = function() {
+      exibirSaboresEscolhidos();
+      calcularTotal();
+    };
+    function imprimirSabores(chaveMesa) {
+      let saboresEscolhidos = sessionStorage.getItem(chaveMesa);
+      if (saboresEscolhidos) {
+        saboresEscolhidos = JSON.parse(saboresEscolhidos);
+        let conteudo = '';
+        saboresEscolhidos.forEach(item => {
+          conteudo += `${item.sabor} - Valor: R$ ${item.valor}\n`;
+        });
+        const janelaImpressao = window.open('', '_blank');
+        janelaImpressao.document.write(`<pre>${conteudo}</pre>`);
+        janelaImpressao.document.close();
+        janelaImpressao.print();
+      } else {
+        alert('Nenhum sabor selecionado para imprimir!');
+      }
+    }function imprimirSabores(chaveMesa) {
+      let saboresEscolhidos = sessionStorage.getItem(chaveMesa);
+      if (saboresEscolhidos) {
+        saboresEscolhidos = JSON.parse(saboresEscolhidos);
+        let conteudo = '';
+        saboresEscolhidos.forEach(item => {
+          conteudo += `${item.sabor} - Valor: R$ ${item.valor}\n`;
+        });
+        const janelaImpressao = window.open('', '_blank');
+        janelaImpressao.document.write(`<pre>${conteudo}</pre>`);
+        janelaImpressao.document.close();
+        janelaImpressao.print();
+      } else {
+        alert('Nenhum sabor selecionado para imprimir!');
+      }
+    }
+    function searchSabor() {
+      const input = document.getElementById('searchInput').value.toUpperCase();
+      const ul = document.getElementById('sabores');
+      const li = ul.getElementsByTagName('li');
+
+      for (let i = 0; i < li.length; i++) {
+        const button = li[i].getElementsByTagName('button')[0];
+        const sabor = button.textContent.toUpperCase();
+        if (sabor.indexOf(input) > -1) {
+          li[i].style.display = '';
+        } else {
+          li[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
+</body>
+</html>

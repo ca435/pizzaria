@@ -1,0 +1,191 @@
+body {
+    background-color: rgb(243, 240, 72);
+    color: rgb(0, 0, 0);
+}
+
+
+.botaosabor {
+    display: inline-block;
+    padding: 05px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #5c70b4;
+    margin-right: 50px;
+  }
+  
+  .botaosabor:hover {background-color: #3e8e41}
+  
+  .botaosabor:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #ffffff;
+    transform: translateY(4px);
+  }
+
+
+  /* Estilos para o campo de busca */
+  #searchInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    width: 250px;
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Estilo para o placeholder (texto do campo vazio) */
+  #searchInput::placeholder {
+    color: #aaa;
+  }
+
+  /* Estilo quando o campo de busca está em foco */
+  #searchInput:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+  }
+
+
+
+
+   /* Estilos para o campo de pesquisa */
+   #searchInput {
+    margin-bottom: 15px;
+  }
+
+  /* Estilos para o contêiner da lista de sabores */
+  .sabores-container {
+    width: 300px;
+    height: 150px;
+    border: 1px solid #ccc;
+    overflow: auto; /* Adiciona barra de rolagem quando necessário */
+    padding: 5px;
+  }
+
+  .bt-tamanhos { 
+    display: flex;
+    justify-content: space-around; /* Isso distribuirá os botões uniformemente */
+    flex-wrap: wrap; /* Quebra para a próxima linha se não couber */
+    text-align:justify
+  }
+ .text-white,
+ .text-white-houve:hover,
+ .bt-t {
+   color: #000000 !important;
+ }
+ .shadow-1,
+ .bt,
+ .container {
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+ }
+ .shadow-2,
+ .bt:hover,
+ .context_menu_pai,
+ .box_login,
+ .datepicker.dropdown-menu,
+ .dialogbox,
+ .overflow-menu ul {
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(221, 4, 4, 0.12);
+ }
+ .transition-1,
+ .bt-t {
+   transition: all .3s ease-out;
+   transition-property: all;
+   transition-duration: 0.3s;
+   transition-timing-function: ease-out;
+ }
+ .bt-t {
+  border: none;
+  padding: 10px;
+  width: 180px;
+  height: 50px;
+  display: inline-table;
+  margin: 1px 1px;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: rgb(114, 179, 10); /* Altere a cor aqui */
+  color: rgb(37, 197, 16); /* Cor do texto */
+  font-style:italic;
+  transition: background-color 0.3s ease;
+}
+.bt-t:hover {
+  /* Cor de fundo quando o botão é passado por cima */
+  background-color: #ddca22;
+}
+
+.bt-t:active {
+  /* Cor de fundo quando o botão é pressionado */
+  background-color: #999;
+}
+ #saboresEscolhidos {
+  position: absolute;
+  top: 250px;
+  right: 200px;
+  padding: 20px;
+  border: 2px solid #f02626;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Defina a largura máxima conforme necessário */
+}
+
+/* Estilos para o total a ser cobrado */
+#total {
+
+  font-weight: bold;
+  position:relative;
+  top: 33px;
+  right: 115px;
+  background-color: #83ec59;
+
+  border: 1px solid #c00000;
+  border-radius: 5px;
+}
+
+/* Estilos para os botões */
+.botao-limpar{
+  display:flex;
+  margin:20px;
+  margin-top: 50px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.botao-imprimir{
+  display:flex;
+  margin:20px;
+  margin-top: 30px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botao-limpar:hover,
+.botao-imprimir:hover {
+  background-color: #45a049;
+  
+}
+
+.saboresEscolhidos1 {
+
+position: absolute;
+top: 20px;
+right: 20px;
+}
+
